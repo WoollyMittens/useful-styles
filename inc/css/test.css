@@ -1,0 +1,8 @@
+/*
+	Example Styling for Useful Functions
+*/
+@media all {
+	* {
+		box-shadow : 0 0 1px Red;
+	}
+}
