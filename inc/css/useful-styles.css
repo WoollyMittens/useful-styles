@@ -1,25 +1,23 @@
 /*
 	Example Styling for Useful Functions
 */
-@media all {
-  /* line 6, ../../src/scss/useful-styles.scss */
-  .useful-tests dt {
-    font-weight: bold;
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-  /* line 12, ../../src/scss/useful-styles.scss */
-  .useful-tests dd {
-    display: block;
-    margin: 0 0 1.3em 0;
-    padding: 0;
-  }
-  /* line 16, ../../src/scss/useful-styles.scss */
-  .useful-tests dd textarea {
-    display: block;
-    margin-bottom: 1em;
-    height: 100px;
-    width: 90%;
-  }
+/* line 5, ../../src/scss/useful-styles.scss */
+.useful-tests dt {
+  font-weight: bold;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* line 11, ../../src/scss/useful-styles.scss */
+.useful-tests dd {
+  display: block;
+  margin: 0 0 1.3em 0;
+  padding: 0;
+}
+/* line 15, ../../src/scss/useful-styles.scss */
+.useful-tests dd textarea {
+  display: block;
+  margin-bottom: 1em;
+  height: 100px;
+  width: 90%;
 }
