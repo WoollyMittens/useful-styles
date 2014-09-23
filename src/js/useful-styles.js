@@ -19,7 +19,7 @@ var useful = useful || {};
 
 		// adds a new style rule to the custom stylesheet
 		add : function (css) {
-			var stylesheet = styles.element.sheet || styles.element.styleSheet;
+			var stylesheet = this.element.sheet || this.element.styleSheet;
 			// split the input into rules and properties
 			var parts = css.split(/{|}/);
 			// add the custom styles
@@ -35,11 +35,11 @@ var useful = useful || {};
 
 		// resets the custom stylesheet
 		reset : function () {
-			var element = styles.element;
+			var element = this.element;
 			// remove the old stylesheet
 			element.parentNode.removeChild(element);
 			// add a new one
-			styles.init();
+			this.init();
 		},
 
 		// loads a custom stylesheet
@@ -54,12 +54,12 @@ var useful = useful || {};
 		// creates a blank stylesheet for editing
 		init : function () {
 			// create a blank style element
-			styles.element = document.createElement('style');
+			this.element = document.createElement('style');
 			// add an exception for webkit
 			var isWebkit = new RegExp('webkit', 'gi');
-			if (isWebkit.test(navigator.UserAgent)) { styles.element.appendChild(document.createTextNode('')); }
+			if (isWebkit.test(navigator.UserAgent)) { this.element.appendChild(document.createTextNode('')); }
 			// add the custom style element to the body
-			document.body.appendChild(styles.element);
+			document.body.appendChild(this.element);
 		}
 
 	};
