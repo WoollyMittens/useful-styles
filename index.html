@@ -33,17 +33,21 @@
 				<script src="./inc/js/useful-styles.js"></script>
 				<div class="useful-tests">
 					<p>Use the text field to insert new style rules into the page.</p>
-					<div id="styles-test-output">Lorem ipsum <strong>dolor sit</strong> amet.</div>
+					<div id="styles-test-output">1</div>
 					<dl>
 						<dt>useful.styles</dt>
 						<dd>
 							<textarea id="styles-test-input">
 #styles-test-output {
-	color : Blue;
-}
-#styles-test-output strong {
-	color : Red;
-	text-decoration : underline;
+	display : block;
+	width : 20px;
+	height : 20px;
+	background-color : Green;
+	color : White;
+	font-weight : bold;
+	font-size : 16px;
+	line-height : 20px;
+	text-align : center;
 }
 							</textarea>
 							<button onclick="useful.styles.add(document.getElementById('styles-test-input').value);">Apply the style rule</button><br/>
@@ -52,7 +56,10 @@
 							<button onclick="useful.styles.reset();">Reset all rules</button><br/>
 						</dd>
 						<dd>
-							<button onclick="useful.styles.load('./inc/css/test.css');">Load test.css</button><br/>
+							<button onclick="window.loadedElement = useful.styles.load('./inc/css/test.css');">Load test.css</button><br/>
+						</dd>
+						<dd>
+							<button onclick="if (window.loadedElement) useful.styles.unload(window.loadedElement);">Unload test.css</button><br/>
 						</dd>
 					</dl>
 				</div>

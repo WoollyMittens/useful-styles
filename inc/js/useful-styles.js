@@ -297,6 +297,9 @@ var useful = useful || {};
 	// Create a private object for this library
 	useful.styles = {
 
+		// storage for a custom stylesheet
+		element : null,
+
 		// adds a new style rule to the custom stylesheet
 		add : function (css) {
 			var stylesheet = this.element.sheet || this.element.styleSheet;
@@ -329,6 +332,12 @@ var useful = useful || {};
 			element.setAttribute('type', 'text/css');
 			element.setAttribute('href', url);
 			document.getElementsByTagName('head')[0].appendChild(element);
+			return element;
+		},
+
+		// unloads a custom stylesheet
+		unload : function (element) {
+			element.parentNode.removeChild(element);
 		},
 
 		// creates a blank stylesheet for editing
