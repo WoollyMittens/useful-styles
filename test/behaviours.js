@@ -57,7 +57,7 @@ describe('Expected behaviours of "useful-styles"', function(){
             .url(path)
             .executeAsync(function (done) {
 
-                window.loadedElement = useful.styles.load('./inc/css/test.css');
+                window.loadedElement = useful.styles.load('./css/test.css');
                 setTimeout(function () {
                     done(document.getElementById('styles-test-output').offsetWidth);
                 }, 1000);

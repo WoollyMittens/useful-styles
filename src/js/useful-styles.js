@@ -15,13 +15,13 @@ var useful = useful || {};
 	"use strict";
 
 	// Create a private object for this library
-	useful.styles = {
+	useful.Styles = function () {
 
 		// storage for a custom stylesheet
-		element : null,
+		this.element = null;
 
 		// adds a new style rule to the custom stylesheet
-		add : function (css) {
+		this.add = function (css) {
 			var stylesheet = this.element.sheet || this.element.styleSheet;
 			// split the input into rules and properties
 			var parts = css.split(/{|}/);
@@ -34,34 +34,34 @@ var useful = useful || {};
 					stylesheet.addRule(parts[a], parts[a + 1], 0);
 				}
 			}
-		},
+		};
 
 		// resets the custom stylesheet
-		reset : function () {
+		this.reset = function () {
 			var element = this.element;
 			// remove the old stylesheet
 			element.parentNode.removeChild(element);
 			// add a new one
 			this.init();
-		},
+		};
 
 		// loads a custom stylesheet
-		load : function (url) {
+		this.load = function (url) {
 			var element = document.createElement('link');
 			element.setAttribute('rel', 'stylesheet');
 			element.setAttribute('type', 'text/css');
 			element.setAttribute('href', url);
 			document.getElementsByTagName('head')[0].appendChild(element);
 			return element;
-		},
+		};
 
 		// unloads a custom stylesheet
-		unload : function (element) {
+		this.unload = function (element) {
 			element.parentNode.removeChild(element);
-		},
+		};
 
 		// creates a blank stylesheet for editing
-		init : function () {
+		this.init = function () {
 			// create a blank style element
 			this.element = document.createElement('style');
 			// add an exception for webkit
@@ -69,16 +69,18 @@ var useful = useful || {};
 			if (isWebkit.test(navigator.UserAgent)) { this.element.appendChild(document.createTextNode('')); }
 			// add the custom style element to the body
 			document.body.appendChild(this.element);
-		}
+			// return the object
+			return this;
+		};
 
 	};
 
 	// startup
-	useful.styles.init();
+	useful.styles = new useful.Styles().init();
 
 	// return as a require.js module
 	if (typeof module !== 'undefined') {
-		exports = module.exports = useful.styles;
+		exports = module.exports = useful.Styles;
 	}
 
 })();
