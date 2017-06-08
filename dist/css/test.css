@@ -3,6 +3,7 @@
 */
 @media all {
   * {
+    -webkit-box-shadow: 0 0 1px Blue;
     box-shadow: 0 0 1px Blue; }
   body #styles-test-output {
     display: block;
