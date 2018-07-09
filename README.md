@@ -1,4 +1,4 @@
-# useful.styles.js: CSS Library
+# styles.js: CSS Library
 
 A library of useful functions to add custom stylesheet rules dynamically.
 
@@ -9,7 +9,7 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-styles">test
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/useful-styles.js"></script>
+<script src="./js/styles.js"></script>
 ```
 
 ## How to control the script
@@ -17,7 +17,7 @@ This include can be added to the header or placed inline before the script is in
 ### add
 
 ```javascript
-useful.styles.add(css);
+styles.add(css);
 ```
 
 Adds custom CSS rules into a page.
@@ -27,7 +27,7 @@ Adds custom CSS rules into a page.
 ### reset
 
 ```javascript
-useful.styles.reset();
+styles.reset();
 ```
 
 Removes all custom rules from the page.
@@ -35,7 +35,7 @@ Removes all custom rules from the page.
 ### load
 
 ```javascript
-useful.styles.load(url);
+styles.load(url);
 ```
 
 Loads a stylesheet into the page. This is not affected by the "reset" function.

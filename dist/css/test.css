@@ -1,17 +1,16 @@
-/*
-	Example Styling for Useful Functions
-*/
-@media all {
-  * {
-    -webkit-box-shadow: 0 0 1px Blue;
-    box-shadow: 0 0 1px Blue; }
-  body #styles-test-output {
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-color: Red;
-    color: White;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
-    text-align: center; } }
+* {
+  -webkit-box-shadow: 0 0 1px Blue;
+  box-shadow: 0 0 1px Blue; }
+
+body #styles-test-output {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: Red;
+  color: White;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlc3Quc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNDLGlDQUF5QjtFQUF6Qix5QkFBeUIsRUFDekI7O0FBQ0Q7RUFDQyxlQUFlO0VBQ2YsWUFBWTtFQUNaLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsYUFBYTtFQUNiLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLG1CQUFtQixFQUNuQiIsImZpbGUiOiJ0ZXN0LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIioge1xuXHRib3gtc2hhZG93IDogMCAwIDFweCBCbHVlO1xufVxuYm9keSAjc3R5bGVzLXRlc3Qtb3V0cHV0IHtcblx0ZGlzcGxheSA6IGJsb2NrO1xuXHR3aWR0aCA6IDMwcHg7XG5cdGhlaWdodCA6IDMwcHg7XG5cdGJhY2tncm91bmQtY29sb3IgOiBSZWQ7XG5cdGNvbG9yIDogV2hpdGU7XG5cdGZvbnQtd2VpZ2h0IDogYm9sZDtcblx0Zm9udC1zaXplIDogMjRweDtcblx0bGluZS1oZWlnaHQgOiAzMHB4O1xuXHR0ZXh0LWFsaWduIDogY2VudGVyO1xufVxuIl19 */
