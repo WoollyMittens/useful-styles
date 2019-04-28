@@ -70,5 +70,5 @@ var Styles = function () {
 };
 
 // return as a require.js module
-if (typeof define != 'undefined') define(['styles'], function () { return Styles });
+if (typeof define != 'undefined') define([], function () { return Styles });
 if (typeof module != 'undefined') module.exports = Styles;

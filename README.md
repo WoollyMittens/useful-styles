@@ -9,7 +9,23 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-styles">test
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/styles.js"></script>
+<script src="js/styles.js"></script>
+```
+
+Or use [Require.js](https://requirejs.org/).
+
+```js
+requirejs([
+	'js/styles.js'
+], function(Styles) {
+	...
+});
+```
+
+Or import into an MVC framework.
+
+```js
+var Styles = require('js/styles.js');
 ```
 
 ## How to control the script
