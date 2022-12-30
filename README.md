@@ -2,8 +2,6 @@
 
 A library of useful functions to add custom stylesheet rules dynamically.
 
-Try the <a href="http://www.woollymittens.nl/default.php?url=useful-styles">tests</a>.
-
 ## How to include the script
 
 This include can be added to the header or placed inline before the script is invoked.
