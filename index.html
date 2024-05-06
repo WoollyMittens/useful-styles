@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    <title>Redirect to demo</title>
-		<script>document.location.replace('./dist/');</script>
+		<meta charset="UTF-8" />
+		<title>styles.js: A library of useful functions to add custom stylesheet rules dynamically.</title>
+		<style>
+			html { font-family:Sans-Serif; font-size:75%; height:100%; }
+			body { _height:100%; line-height:180%; margin:0; min-height:100%; padding:1%; }
+			.example { max-width:960px; margin:0 auto; padding:0; clear:both; }
+			.example > article, .example > aside { width:98%; padding:2%; }
+			.example-left > article, .example-left > aside { width:48%; padding:1%; float:left; }
+			.example-right > article, .example-right > aside { width:48%; padding:1%; float:right; }
+		</style>
 	</head>
 	<body>
-		<a href="./dist/">Start</a>
+		<section class="example example-right">
+			<article>
+				<h2>Styles Library</h2>
+				<p>A library of useful functions to add custom stylesheet rules dynamically.</p>
+				<p><a class="button downloadButton" href="http://github.com/WoollyMittens/useful-styles" target="_blank">Download (GitHub)</a></p>
+			</article>
+			<aside>
+
+				<!-- Cut below this -->
+				<style>@import url("./css/styles.css");</style>
+				<script src="./js/styles.js"></script>
+				<script>var styles = new Styles();</script>
+				<div class="styles-tests">
+					<p>Use the text field to insert new style rules into the page.</p>
+					<div id="styles-test-output">1</div>
+					<dl>
+						<dt>useful.styles</dt>
+						<dd>
+							<textarea id="styles-test-input">
+#styles-test-output {
+	display : block;
+	width : 20px;
+	height : 20px;
+	background-color : Green;
+	color : White;
+	font-weight : bold;
+	font-size : 16px;
+	line-height : 20px;
+	text-align : center;
+}
+							</textarea>
+							<button onclick="styles.add(document.getElementById('styles-test-input').value);">Apply the style rule</button><br/>
+						</dd>
+						<dd>
+							<button onclick="styles.reset();">Reset all rules</button><br/>
+						</dd>
+						<dd>
+							<button onclick="window.loadedElement = styles.load('./css/test.css');">Load test.css</button><br/>
+						</dd>
+						<dd>
+							<button onclick="if (window.loadedElement) styles.unload(window.loadedElement);">Unload test.css</button><br/>
+						</dd>
+					</dl>
+				</div>
+				<!-- Cut above this -->
+
+			</aside>
+		</section>
 	</body>
 </html>
